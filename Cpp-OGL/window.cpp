@@ -109,6 +109,7 @@ void Window::flush() {
 }
 
 Window::~Window() {
+	glfwSetWindowShouldClose(address, true);
 	windowCount--;
 	if (callouts) {
 		cout << "Destructing window " << title << endl;
